@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of game</title>
+    <link rel= "stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id= "end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class ="end-form-container">
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit"
+                onClick="saveHighScore(event)" disabled></button>
+            </form>
+            <a href="index2.html" class="btn">Play Again</a>
+            <a href="index.html" class="btn">Home</a>
+        </div>
+    </div>
+</body>
+</html>

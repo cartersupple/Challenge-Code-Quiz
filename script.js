@@ -9,14 +9,14 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-let question = [
+let questions = [
     {
     question: "Which of the following is a disadvantage of using JavaScript?",
     choice1: "Client-side JavaScript does not allow the reading or writing of files",
     choice2: "JavaScript can not be used for Networking applications because there is no such support available",
     choice3: "JavaScript doesn't have any multithreading or multiprocess capabilities",
     choice4: "All of the above",
-    answer: "All of the above",
+    answer: 4,
     },
     {
     question: "How can you get the type of arguments passed to a function?",
@@ -24,7 +24,7 @@ let question = [
     choice2: "using getType function",
     choice3: "Both of the above",
     choice4: "None of the above",
-    answer: "using typeof operator",
+    answer: 1,
     },
     {
     question: "Which built-in method returns the length of the string?",
@@ -32,7 +32,7 @@ let question = [
     choice2: "size()",
     choice3: "index()",
     choice4: "None of the above",
-    answer: "length()",
+    answer: 1,
     },
     {
     question: "Which of the following function of Boolean object returns a string of either 'true' or 'false' depending upon the value of the object?",
@@ -40,7 +40,7 @@ let question = [
     choice2: "valueOf()",
     choice3: "toString()",
     choice4: "None of the above",
-    answer: "toString()",
+    answer: 3,
     },
     {
     question: "Which of the following function of String object executes the search for a match between a regular expression and a specified string?",
@@ -48,7 +48,7 @@ let question = [
     choice2: "match()",
     choice3: "replace()",
     choice4: "search()",
-    answer: "search()",
+    answer: 4,
     },
 ]
 
@@ -59,7 +59,7 @@ startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    getNewQuestions()
+    getNewQuestion()
 }
 
 getNewQuestion = () => {
@@ -69,12 +69,8 @@ getNewQuestion = () => {
         return window.location.assign('index3.html')
     }
 
-    questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
-    progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
-
     var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionIndex]
+    currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
@@ -82,12 +78,12 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number]
     })
 
-    availableQuestions.splice(questionIndex, 1)
+    availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
 }
 
-choice.forEach(choice => {
+choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
        
@@ -114,4 +110,4 @@ incrementScore = num => {
     scoreText.innerText = score
 }
 
-startGame()
+startGame();
