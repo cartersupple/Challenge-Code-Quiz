@@ -28,10 +28,7 @@ h2 {
     margin: 0 auto;
     padding: 2rem;
 }
-.flex-column {
-display: flex;
-align-items: center;
-}
+
 .flex-center{
     justify-content: center;
     align-items: center;

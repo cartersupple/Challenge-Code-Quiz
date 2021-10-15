@@ -1,0 +1,33 @@
+body {
+    color: white;
+}
+.choice-container {
+    display:flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: blue;
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover{
+    curser:pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 blue;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    width: 100%;
+    
+}
+.correct {
+    background: green;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
