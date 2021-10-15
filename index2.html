@@ -13,8 +13,21 @@
 
     <div class="container">
         <div id="game" class="justify-center flex-column">
-         <div id="countdown">00:00</div>
-            <h1 id="question"> What is the answer to this</h1>
+         <div id="hud">
+            <div id="countdown">00:00
+            </div>
+
+            <div class="hud-item">
+             <p class="hud-prefix">
+                 Score
+             </p>
+             <h1 class = "hud-main-text" id="score">
+                 0
+             </h1>
+            </div>
+        </div>
+           
+         <h1 id="question"></h1>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
                 <p class="choice-text" data-number="1">Choice 1</p>
@@ -34,6 +47,7 @@
         </div>    
     </div>
     <script src="script.js"></script>
+    <script src="timer.js"></script>
     
 </body>
 </html>

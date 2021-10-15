@@ -1,6 +1,5 @@
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
-var progressText = document.querySelector('#progressText');
 var scoreText = document.querySelector('#score');
 
 let currentQuestion = {}
@@ -49,7 +48,7 @@ let questions = [
     choice3: "replace()",
     choice4: "search()",
     answer: 4,
-    },
+    }
 ]
 
 var SCORE_POINTS = 100
@@ -89,7 +88,7 @@ choices.forEach(choice => {
        
         acceptingAnswers = false
         var selectedChoice = e.target
-        var selectedAnswer = selectedChoice.dataset('number')
+        var selectedAnswer = selectedChoice.dataset("number")
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct':
         "incorrect"
 
@@ -110,20 +109,4 @@ incrementScore = num => {
     scoreText.innerText = score
 }
 
-var startingMinutes = 10;
-let time = startingMinutes * 60;
-
-var countdownEL = document.getElementById('countdown');
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-    var minutes = Math.floor(time / 60);
-    var seconds = time % 60;
-
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-
-    countdownEL.innerHTML = '${minutes}:${seconds}';
-    time--;
-}
 startGame();
