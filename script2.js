@@ -31,3 +31,5 @@ saveHighScore = e => {
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('/')
 }
+
+// saves players highscore and name to the local storage to be viewed in "scores" page. Only top 5 scores will appear.

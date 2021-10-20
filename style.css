@@ -1,6 +1,7 @@
 :root {
     background-color: rgb(30,30,1)
 }
+/* applies a background color to all pages */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +10,7 @@
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 
 }
+/* styles all text elements */
 h1 {
     font-size: 5.4rem;
     color:aliceblue;
@@ -18,6 +20,8 @@ h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
 }
+
+/* gives the container everything is stored in style definitions */
 .container {
     width: 100vw;
     height: 100vh;  
@@ -28,6 +32,7 @@ h2 {
     margin: 0 auto;
     padding: 2rem;
 }
+/* sub elements given the "" class to keep them in line */
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -46,6 +51,8 @@ h2 {
 .hidden {
     display: none;
 }
+
+/*styles the button elements  */
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
@@ -57,11 +64,14 @@ h2 {
     background: gray;
     border-radius: 4px;
 }
+
+/* makes the buttons grow in size */
 .btn:hover {
     cursor: pointer;
     transition: transform 150ms;
     transform: scale(1.03);
 }
+/* disables them when they should not be pressed */
 .btn[disabled]:hover{
     cursor: not-allowed;
     box-shadow: none;
@@ -96,7 +106,7 @@ h2 {
     align-items: center;
     max-width: 30rem;
 }
-
+/* styles where the player inputs their name */
 input {
     margin-bottom: 1rem;
     width: 20rem;

@@ -24,3 +24,4 @@ function endCount() {
   timeH.innerHTML = "Times up!";
 }
 
+// creates timer function from 3 minutes into the element "countdowm". When the timer ends function endCount displays "Times Up!"

@@ -1,6 +1,7 @@
 body {
     color: white;
 }
+/* styles where the answers will be */
 .choice-container {
     display:flex;
     margin-bottom: 0.8rem;
@@ -10,7 +11,7 @@ body {
     font-size: 3rem;
     min-width: 80rem;
 }
-
+/* makes the answer containers grow and have a shadow behind them */
 .choice-container:hover {
     curser: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(91, 91, 155);
@@ -26,12 +27,15 @@ body {
     padding: 2rem;
     width: 100%;
 }
+/* correct answers will be represented by green color change */
 .correct {
     background: green;
 }
+/* incorrect answers will be represented by a red color change */
 .incorrect {
     background: red;
 }
+/* styles the score and timer */
 #hud {
     display:flex;
     justify-content: space-between;
@@ -43,7 +47,6 @@ body {
 .hud-main-text {
     text-align: center;
 }
-
 
 @media screen and (max-width: 768px) {
     .choice-container {
