@@ -88,19 +88,22 @@ choices.forEach(choice => {
        
         acceptingAnswers = false
         var selectedChoice = e.target
-        var selectedAnswer = selectedChoice.dataset("number")
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct':
-        "incorrect"
+        var selectedAnswer = selectedChoice.dataset['number']
+        
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 
+        'incorrect'
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+
         selectedChoice.parentElement.classList.add(classToApply)
 
-        setTimeout(() => {
+    setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply)
         getNewQuestion()
-        },1000)
+       
+    },1000)
    })
 })
 
