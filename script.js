@@ -116,4 +116,3 @@ startGame();
 
 // Creates dynamic and random question order from the listed array of questions and defined correct answers.
 // When the correct answer is pressed the container-btn turns green and continues to next question and visa versa.
-// 

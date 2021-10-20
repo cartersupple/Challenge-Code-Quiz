@@ -29,7 +29,7 @@ saveHighScore = e => {
     highScores.splice(5)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/')
+    window.location.assign('index4.html')
 }
 
 // saves players highscore and name to the local storage to be viewed in "scores" page. Only top 5 scores will appear.
