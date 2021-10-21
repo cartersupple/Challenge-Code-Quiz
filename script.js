@@ -54,12 +54,6 @@ let questions = [
 var SCORE_POINTS = 100
 var MAX_QUESTIONS = 5
 
-startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
-}
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
@@ -110,6 +104,12 @@ choices.forEach(choice => {
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
+}
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
 }
 
 startGame();
