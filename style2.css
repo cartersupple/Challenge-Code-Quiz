@@ -20,12 +20,18 @@ body {
 }
 .choice-prefix {
     padding: 2rem 2.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
     
 }
 .choice-text {
     padding: 2rem;
     width: 100%;
+    color:white;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
 /* correct answers will be represented by green color change */
 .correct {
