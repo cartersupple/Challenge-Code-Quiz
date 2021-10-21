@@ -13,7 +13,7 @@ body {
 }
 /* makes the answer containers grow and have a shadow behind them */
 .choice-container:hover {
-    curser: pointer;
+    cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(91, 91, 155);
     transform: scale(1.02);
     transform: transform 100ms;
